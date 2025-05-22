@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
-import future_banner from '../../../../public/images/future_banner.png';
-import future_mobile_banner from '../../../../public/images/future_mobile_banner.png';
+import future_banner from '../../../../public/images/help_banner.jpg';
+import future_mobile_banner from '../../../../public/images/help_banner.jpg';
 import {
   Wrapper,
   Inner,
@@ -23,20 +23,13 @@ import {
   mobileHeaderPhrase,
   mobileParagraphPhrase,
   stats,
-  servicesInfo, // Adicionado para renderizar servicesInfo
+
 } from './constants';
 
 const FinancialFuture = () => {
   const isMobile = useIsMobile();
 
-  // Adicionar console.log para depuração
-  console.log('cardsInfo:', cardsInfo);
-  console.log('stats:', stats);
-  console.log('servicesInfo:', servicesInfo);
-  console.log('desktopHeaderPhrase:', desktopHeaderPhrase);
-  console.log('mobileHeaderPhrase:', mobileHeaderPhrase);
-  console.log('desktopParagraphPhrase:', desktopParagraphPhrase);
-  console.log('mobileParagraphPhrase:', mobileParagraphPhrase);
+
 
   return (
     <Wrapper>
@@ -118,33 +111,7 @@ const FinancialFuture = () => {
           )}
         </Stats>
         {/* Seção para servicesInfo com grade 3x3 */}
-        <CardContainer>
-          {Array.isArray(servicesInfo) && servicesInfo.length > 0 ? (
-            servicesInfo.map((service, i) => (
-              <Card key={i}>
-                <TextCtn>
-                  {typeof service.title === 'string' ? (
-                    <MaskText phrases={[service.title]} tag="h3" />
-                  ) : (
-                    <h3>Título não disponível</h3>
-                  )}
-                  {typeof service.details === 'string' ? (
-                    <MaskText phrases={[service.details]} tag="p" />
-                  ) : (
-                    <p>Detalhes não disponíveis</p>
-                  )}
-                </TextCtn>
-                {service.icon && (
-                  <SVGCtn>
-                    <Image src={service.icon} alt="service-icon" />
-                  </SVGCtn>
-                )}
-              </Card>
-            ))
-          ) : (
-            <p></p>
-          )}
-        </CardContainer>
+       
       </Inner>
       <Banner>
         {isMobile ? (

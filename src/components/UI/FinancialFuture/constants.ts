@@ -47,20 +47,18 @@ export const cardsInfo = [
 export const stats = [
   {
     number: '50+',
-    subtitle: 'cities',
+    subtitle: 'Clientes',
   },
   {
-    number: '50,000+',
-    subtitle: 'transactions',
+    number: '50+',
+    subtitle: 'Projetos',
   },
-  {
-    number: '3M+',
-    subtitle: 'users',
+   {
+    number: '50+',
+    subtitle: 'Parceiros',
   },
-  {
-    number: '5+',
-    subtitle: 'user ratings',
-  },
+ 
+ 
 ];
 
 

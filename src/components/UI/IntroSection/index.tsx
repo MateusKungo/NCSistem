@@ -2,18 +2,13 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Edge, Edges, Title } from '../FinancialFreedom/styles';
-import lola_card from '../../../../public/images/lola_card.png';
-import orange_card from '../../../../public/images/orange_card.png';
-import terry_card from '../../../../public/images/terry_card.png';
+
 import {
   Wrapper,
   Inner,
   Header,
   HeaderMainText,
-  CardsContainer,
-  LeftImage,
-  MiddleImage,
-  RightImage,
+
 } from './styles';
 import { MaskText } from '@/components';
 import { useIsMobile } from '../../../../libs/useIsMobile';
@@ -22,7 +17,6 @@ import {
   desktopParagraphPhrase,
   edges,
   mobileHeaderPhrase,
-  mobileParagraphPhrase,
 } from './constants';
 
 const IntroSection = () => {
@@ -38,7 +32,7 @@ const IntroSection = () => {
             {isMobile ? (
               <>
                 <MaskText phrases={mobileHeaderPhrase} tag="h1" />
-                <MaskText phrases={mobileParagraphPhrase} tag="p" />
+               
               </>
             ) : (
               <>
